@@ -7,30 +7,29 @@ class Header extends Component {
   render() {
     const authToken = localStorage.getItem(AUTH_TOKEN)
     return (
-      <div className="flex pa1 justify-between nowrap orange">
+      <div className="ph3 pv1">
+        <div className="flex justify-between items-center nowrap ">
+          <Link to="/" className="no-underline black">
+            <h1>핫딜링크</h1>
+          </Link>
+        </div>
         <div className="flex flex-fixed black">
-          <div className="fw7 mr1">Hacker News</div>
-          <Link to="/" className="ml1 no-underline black">
-            new
+          <Link to="/" className="mr3 no-underline black">
+            신규핫딜
           </Link>
-          <div className="ml1">|</div>
-          <Link to="/top" className="ml1 no-underline black">
-            top
+          <Link to="/top" className="mr3 no-underline black">
+            인기핫딜
           </Link>
-          <div className="ml1">|</div>
-          <Link to="/search" className="ml1 no-underline black">
-            search
+          <Link to="/search" className="mr3 no-underline black">
+            검색
           </Link>
           {authToken && (
             <div className="flex">
-              <div className="ml1">|</div>
-              <Link to="/create" className="ml1 no-underline black">
-                submit
+              <Link to="/create" className="mr3 no-underline black">
+                등록
               </Link>
             </div>
           )}
-        </div>
-        <div className="flex flex-fixed">
           {authToken ? (
             <div
               className="ml1 pointer black"
@@ -39,13 +38,13 @@ class Header extends Component {
                 this.props.history.push(`/`)
               }}
             >
-              logout
+              로그아웃
             </div>
           ) : (
-              <Link to="/login" className="ml1 no-underline black">
-                login
+            <Link to="/login" className="mr3 no-underline black">
+              <h3 className="black-60">로그인</h3>
             </Link>
-            )}
+          )}
         </div>
       </div>
     )

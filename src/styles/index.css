@@ -4,8 +4,19 @@ body {
   font-family: Verdana, Geneva, sans-serif;
 }
 
+a { text-decoration: none; color:inherit}
+
 input {
   max-width: 500px;
+  border:0;
+  border-bottom: 1px solid #000;
+  margin : 0.25rem 0;
+}
+
+button {
+  max-width: 500px;
+  border: 1px solid #000;
+  margin : 0.25rem 0;
 }
 
 .gray {

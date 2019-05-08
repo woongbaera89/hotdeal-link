@@ -14,15 +14,15 @@ function timeDifference(current, previous) {
   if (elapsed < milliSecondsPerMinute) {
     return 'less than 1 min ago'
   } else if (elapsed < milliSecondsPerHour) {
-    return Math.round(elapsed / milliSecondsPerMinute) + ' min ago'
+    return Math.round(elapsed / milliSecondsPerMinute) + '분 전'
   } else if (elapsed < milliSecondsPerDay) {
-    return Math.round(elapsed / milliSecondsPerHour) + ' h ago'
+    return Math.round(elapsed / milliSecondsPerHour) + '시간 전'
   } else if (elapsed < milliSecondsPerMonth) {
-    return Math.round(elapsed / milliSecondsPerDay) + ' days ago'
+    return Math.round(elapsed / milliSecondsPerDay) + '일 전'
   } else if (elapsed < milliSecondsPerYear) {
-    return Math.round(elapsed / milliSecondsPerMonth) + ' mo ago'
+    return Math.round(elapsed / milliSecondsPerMonth) + '달 전'
   } else {
-    return Math.round(elapsed / milliSecondsPerYear) + ' years ago'
+    return Math.round(elapsed / milliSecondsPerYear) + '년 전'
   }
 }
 

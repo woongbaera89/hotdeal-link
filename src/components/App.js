@@ -9,9 +9,9 @@ import Search from './Search'
 class App extends Component {
   render() {
     return (
-      <div className="center w85">
+      <div className="center w100">
         <Header />
-        <div className="ph3 pv1 background-gray">
+        <div className="ph3 pv1">
           <Switch>
             <Route exact path="/" render={() => <Redirect to="/new/1" />} />
             <Route exact path="/create" component={CreateLink} />

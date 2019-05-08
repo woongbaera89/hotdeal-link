@@ -38,7 +38,7 @@ class Login extends Component {
               value={name}
               onChange={e => this.setState({ name: e.target.value })}
               type="text"
-              placeholder="Your name"
+              placeholder="닉네임"
             />
           )}
           <input

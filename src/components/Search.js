@@ -36,12 +36,12 @@ class Search extends Component {
     return (
       <div>
         <div>
-          Search
           <input
+            className="ba"
             type="text"
             onChange={e => this.setState({ filter: e.target.value })}
           />
-          <button onClick={() => this._executeSearch()}>OK</button>
+          <button onClick={() => this._executeSearch()}>검색</button>
         </div>
         {this.state.links.map((link, index) => (
           <Link key={link.id} link={link} index={index} />

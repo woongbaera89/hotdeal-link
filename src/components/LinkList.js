@@ -181,12 +181,12 @@ class LinkList extends Component {
                 />
               ))}
               {isNewPage && (
-                <div className="flex ml4 mv3 gray">
+                <div className="flex justify-center mv3 gray">
                   <div className="pointer mr2" onClick={this._previousPage}>
-                    Previous
+                    이전
                   </div>
                   <div className="pointer" onClick={() => this._nextPage(data)}>
-                    Next
+                    다음
                   </div>
                 </div>
               )}
