@@ -12,6 +12,11 @@ class Header extends Component {
           <Link to="/" className="no-underline black">
             <h1>핫딜링크</h1>
           </Link>
+          <div className="flex flex-fixed">
+            <Link to="/search" className="mr3 no-underline black">
+              <h3>🔍</h3>
+            </Link>
+          </div>
         </div>
         <div className="flex flex-fixed black">
           <Link to="/" className="mr3 no-underline black">
@@ -19,9 +24,6 @@ class Header extends Component {
           </Link>
           <Link to="/top" className="mr3 no-underline black">
             인기핫딜
-          </Link>
-          <Link to="/search" className="mr3 no-underline black">
-            검색
           </Link>
           {authToken && (
             <div className="flex">
